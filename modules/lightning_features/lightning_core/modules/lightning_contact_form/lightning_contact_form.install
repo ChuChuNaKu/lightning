@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update routines for Lightning Contact Form.
+ */
+
+use Drupal\contact\Entity\ContactForm;
+
+/**
+ * Implements hook_install().
+ */
+function lightning_contact_form_install() {
+  ContactForm::load('sitewide')
+    ->setRecipients([
+      \Drupal::config('system.site')->get('mail'),
+    ])
+    ->save();
+}
