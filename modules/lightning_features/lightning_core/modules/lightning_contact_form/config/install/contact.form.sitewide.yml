@@ -6,7 +6,7 @@ dependencies:
 third_party_settings:
   contact_storage:
     submit_text: Send
-    show_preview: true
+    show_preview: false
     disabled_form_message: 'This contact form has been disabled.'
     maximum_submissions_user: 0
 id: sitewide
